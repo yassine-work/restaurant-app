@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import  mongoose from "mongoose";
 
 const reservationSchema=new mongoose.Schema({
     name:{type:String,required:true,minLength:2,trim:true},

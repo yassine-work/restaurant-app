@@ -11,7 +11,6 @@ const reservationSchema=Joi.object({
     message: Joi.string().allow("").optional(),
 })
 
-
 export  const createReservation = async (req, res) => {
     try{
         const {error,value}=reservationSchema.validate(req.body)
@@ -26,21 +25,12 @@ export  const createReservation = async (req, res) => {
         })
         res.status(201).json({message:"reservation created",reservation})
 
-
-
     }
     catch(err){
         console.log(err)
         return res.status(500).json({
             error:"server error",
         })
-
-
-
     }
-
-
-
-
 
 }

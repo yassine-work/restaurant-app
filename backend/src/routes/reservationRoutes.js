@@ -1,5 +1,5 @@
 import express from "express"
-import {createReservation} from "../controllers/reservationController"
+import {createReservation} from "../controllers/reservationController.js"
 
 
 

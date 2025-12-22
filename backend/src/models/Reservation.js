@@ -14,11 +14,11 @@ const reservationSchema=new mongoose.Schema({
     },
     date:{type:Date,required:true},
     time:{type:String,required:true},
-    guest:{type:Number,required:true,min:1,validate:Number.isInteger,max:20,trim:true},
+    guest:{type:Number,required:true,min:1,validate:Number.isInteger,max:20},
     message:{type:String,default:'',trim:true},
     createdAt:{type:Date,default:Date.now,immutable:true},
 
 })
 
 const reservation= mongoose.model("Reservation",reservationSchema);
-module.exports = reservation;
+export  default  reservation;
